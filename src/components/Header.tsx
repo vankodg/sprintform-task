@@ -4,7 +4,7 @@ import logo from "../assets/logo.png";
 
 export default function Header() {
   return (
-    <Navbar bg="dark">
+    <Navbar bg="light">
       <Container>
         <Navbar.Brand>
           <img
@@ -12,7 +12,6 @@ export default function Header() {
             height={50}
             alt="sprintform spending tracker tool logo"
           />
-          Hello
         </Navbar.Brand>
       </Container>
     </Navbar>
