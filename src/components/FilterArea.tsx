@@ -33,7 +33,7 @@ export default function FilterArea({
 
   return (
     <Container>
-      <Card style={{ padding: "0.5em" }}>
+      <Card style={{ padding: "1em", marginTop: "1em" }}>
         <Form
           onSubmit={(e) => {
             e.preventDefault();

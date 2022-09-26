@@ -16,7 +16,6 @@ export default function Page() {
       );
       const jsonData = await data.json();
       setTransactions(jsonData);
-      console.log("api Page");
     };
 
     api();
