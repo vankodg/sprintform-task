@@ -1,5 +1,6 @@
 import { Card, Container, Stack } from "react-bootstrap";
 import { Transaction, Category, Currency } from "../types";
+import Moment from "moment";
 
 type TransactionListProps = {
   transactions: Transaction[];
@@ -27,7 +28,7 @@ function CategoryIcon(category: Category): string {
       icon = "🏥";
       break;
     case "financial":
-      icon = "🏘️";
+      icon = "💲";
       break;
     case "lifestyle":
       icon = "🕶️";
@@ -65,7 +66,7 @@ export default function TransactionList({
             >
               <div style={{ fontWeight: "600" }}>{transaction.summary}</div>
               <div style={{ fontSize: "0.8em" }}>
-                {transaction.paid.toString()}
+                {Moment(transaction.paid).format("YYYY. MM. DD.")}
               </div>
             </Stack>
             <div

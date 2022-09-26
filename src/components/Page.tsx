@@ -16,6 +16,7 @@ export default function Page() {
       );
       const jsonData = await data.json();
       setTransactions(jsonData);
+      console.log("api Page");
     };
 
     api();
@@ -23,7 +24,10 @@ export default function Page() {
 
   return (
     <>
-      <FilterArea />
+      <FilterArea
+        transactions={transactions}
+        setTransactions={setTransactions}
+      />
       <TransactionList transactions={transactions} />
     </>
   );
